@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #ebeeed;
+    background-color: #ebeeed;
+    font-family: 'Inter';
+}
+
+header{
+    height: 75px;
+    width: 100%;
+    background-color: #ebeeed;
+    color: #62a284;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-toggle-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px 20px;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s opacity ease-in-out;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+}
+
+.toggle-menu:checked ~ nav {
+    transform: translateX(0);
+}
+
+nav  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #62a284;
+    width: 300px;
+    transform: translateX(-100%);
+    will-change: transform;
+    transition: 0.3s transform linear;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 60% 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 20px 40px;
+}
+
+.active{
+    padding: 40px;
+    background-color: #ebeeed;
+    color: #62a284;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Inter';
+    color: #ebeeed;
+}
+
+.active a{
+    color: #62a284;
+}
+
+iframe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 150px;
+    padding-right:50px;
+    border: none;
+}
+
+.stats_header{
+    width: 35%;
+    height: 100px;
+    background-color: #7dab91;
+    border-radius: 20px;    
+    margin: 10px;
+    margin-left:50px;
+    display: flex;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+
+.stats_general{
+    width: 35%;
+    height: 800px;
+    background-color: #b4beac;
+    border-radius: 20px;
+    margin-left: 50px;
+    display: flex;
+    padding: 20px;
+}
